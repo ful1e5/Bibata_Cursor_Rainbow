@@ -4,7 +4,7 @@
     <path d="M119.524 116.666H79.4803L79.5038 140.132L5.82764 100.001L79.4428 59.8762L79.4663 83.3325L119.54 83.3325L119.563 59.8762L193.178 100.002L119.5 140.131L119.524 116.666Z" fill="#000000"/>
   </g>
   <path d="M127.029 90.8333L127.048 72.5L177.5 100L127.01 127.5L127.028 109.167L71.9699 109.167L71.9882 127.5L21.5001 100L71.9525 72.5L71.9709 90.8333H127.029Z" fill="#F8CA01">
-    <animate attributeName="fill" values="#F8CA01;#F47F02;#F65054;#884FF9;#2590F9;#0FC584;#F8CA01" dur="1.5s" repeatCount="1"/>
+    <animate attributeName="fill" values="#F8CA01;#F47F02;#F65054;#884FF9;#2590F9;#0FC584;#F8CA01" dur="0.2s" repeatCount="1"/>
   </path>
   <defs>
     <filter id="filter0_d" x="0.827637" y="58.8762" width="197.351" height="90.2553" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">

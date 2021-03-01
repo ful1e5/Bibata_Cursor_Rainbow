@@ -112,7 +112,7 @@ class BitmapsGenerator {
 		}
 	) {
 		const opt = Object.assign(
-			{ playbackRate: 0.3, diff: 0, frameLimit: 300, framePadding: 4 },
+			{ playbackRate: 0.1, diff: 0, frameLimit: 300, framePadding: 4 },
 			options
 		);
 
