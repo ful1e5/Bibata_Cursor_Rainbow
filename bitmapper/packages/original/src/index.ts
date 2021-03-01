@@ -4,7 +4,9 @@ import { BitmapsGenerator, SVGHandler } from "bibata-core";
 
 const root = path.resolve(__dirname, "../../../../");
 const svgDir = path.resolve(root, "svg", "original");
+
 const themeName = "Bibata-Rainbow-Original";
+const trueAnimated = ["wait", "left_ptr_watch"];
 
 const main = async () => {
 	console.log("=>", themeName);
@@ -22,7 +24,11 @@ const main = async () => {
 
 	for (let { key, content } of svg.getAnimated()) {
 		console.log(" -> Saving", key, "...");
-		await png.generateAnimated(browser, content, key);
+		if (trueAnimated.includes(key)) {
+			await png.generateAnimated(browser, content, key, { playbackRate: 0.3 });
+		} else {
+			await png.generateAnimated(browser, content, key);
+		}
 	}
 
 	await browser.close();

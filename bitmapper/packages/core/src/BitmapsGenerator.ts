@@ -57,11 +57,7 @@ class BitmapsGenerator {
 		return svg;
 	}
 
-	public async generateStatic(
-		browser: Browser,
-		content: string,
-		key: string
-	) {
+	public async generateStatic(browser: Browser, content: string, key: string) {
 		const page = await browser.newPage();
 		const svg = await this.getSvgElement(page, content);
 
@@ -108,18 +104,18 @@ class BitmapsGenerator {
 		browser: Browser,
 		content: string,
 		key: string,
-		options: {
-			playbackRate: number;
-			diff: number;
-			frameLimit: number;
-			framePadding: number;
-		} = {
-			playbackRate: 0.3,
-			diff: 0,
-			frameLimit: 300,
-			framePadding: 4,
+		options?: {
+			playbackRate?: number;
+			diff?: number;
+			frameLimit?: number;
+			framePadding?: number;
 		}
 	) {
+		const opt = Object.assign(
+			{ playbackRate: 0.3, diff: 0, frameLimit: 300, framePadding: 4 },
+			options
+		);
+
 		const page = await browser.newPage();
 		const svg = await this.getSvgElement(page, content);
 		await this.stopAnimation(page);
@@ -130,22 +126,22 @@ class BitmapsGenerator {
 
 		// Rendering frames till `imgN` matched to `imgN-1` (When Animation is done)
 		while (!breakRendering) {
-			if (index > options.frameLimit) {
+			if (index > opt.frameLimit) {
 				throw new Error("Reached the frame limit.");
 			}
 
-			this.resumeAnimation(page, options.playbackRate);
+			this.resumeAnimation(page, opt.playbackRate);
 			const img: string | Buffer = await this.screenshot(svg);
 			this.stopAnimation(page);
 
 			if (index > 1) {
 				// @ts-ignore
 				const diff = matchImages(prevImg, img);
-				if (diff <= options.diff) {
+				if (diff <= opt.diff) {
 					breakRendering = !breakRendering;
 				}
 			}
-			const number = frameNumber(index, options.framePadding);
+			const number = frameNumber(index, opt.framePadding);
 			const frame = `${key}-${number}.png`;
 
 			this.saveFrameImage(frame, img);
