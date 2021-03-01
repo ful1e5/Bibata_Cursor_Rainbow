@@ -47,7 +47,7 @@ class BitmapsGenerator {
 		}
 
 		const html = toHTML(content);
-		await page.setContent(html);
+		await page.setContent(html, { timeout: 0 });
 
 		const svg = await page.$("#container svg");
 
@@ -82,15 +82,15 @@ class BitmapsGenerator {
 	}
 
 	private async stopAnimation(page: Page) {
-		//@ts-ignore
-		await page._client.send("Animation.setPlaybackRate", {
+		const client = await page.target().createCDPSession();
+		await client.send("Animation.setPlaybackRate", {
 			playbackRate: 0,
 		});
 	}
 
 	private async resumeAnimation(page: Page, playbackRate: number) {
-		//@ts-ignore
-		await page._client.send("Animation.setPlaybackRate", {
+		const client = await page.target().createCDPSession();
+		await client.send("Animation.setPlaybackRate", {
 			playbackRate,
 		});
 	}
@@ -130,9 +130,9 @@ class BitmapsGenerator {
 				throw new Error("Reached the frame limit.");
 			}
 
-			this.resumeAnimation(page, opt.playbackRate);
+			await this.resumeAnimation(page, opt.playbackRate);
 			const img: string | Buffer = await this.screenshot(svg);
-			this.stopAnimation(page);
+			await this.stopAnimation(page);
 
 			if (index > 1) {
 				// @ts-ignore
@@ -149,7 +149,6 @@ class BitmapsGenerator {
 			prevImg = img;
 			++index;
 		}
-
 		await page.close();
 	}
 }

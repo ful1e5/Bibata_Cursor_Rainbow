@@ -1,6 +1,6 @@
 import path from "path";
 
-import { BitmapsGenerator, SVGHandler } from "bibata-core";
+import { BitmapsGenerator, SVGHandler } from "bibata-rainbow-core";
 
 const root = path.resolve(__dirname, "../../../../");
 const svgDir = path.resolve(root, "svg", "original");
