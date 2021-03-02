@@ -3,7 +3,7 @@
 
 from typing import Any, Dict, Tuple, TypeVar
 
-from clickgen.util import PNGProvider
+from brbpkg.extra import PNGProvider
 
 from brbpkg.constants import WIN_CURSORS_CFG, WIN_DELAY, X_CURSORS_CFG, X_DELAY
 

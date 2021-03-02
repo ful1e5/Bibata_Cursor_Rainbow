@@ -4,13 +4,12 @@
 from pathlib import Path
 from typing import Any, Dict, NamedTuple
 
+from brbpkg.constants import AUTHOR, URL
+from brbpkg.extra import XPackager
+from brbpkg.symlinks import add_missing_xcursor
 from clickgen.builders import WindowsCursor, XCursor
 from clickgen.core import CursorAlias
 from clickgen.packagers import WindowsPackager
-
-from brbpkg.constants import AUTHOR, URL
-from brbpkg.packager import XPackager
-from brbpkg.symlinks import add_missing_xcursor
 
 
 class Info(NamedTuple):
