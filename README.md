@@ -1,7 +1,7 @@
 <!-- Branding -->
 
 <p align="center">
-  <img src="./svg/branding/logo.svg" width="40%">
+  <img src="./svg/branding/logo.svg" width="20%">
 </p>
 
 <p align="center">
@@ -15,7 +15,7 @@
   <!-- First Row -->
 
   <a href="https://github.com/ful1e5/Bibata_Cursor_Rainbow/actions">
-    <img alt="GitHub Action Build" src="https://github.com/ful1e5/Bibata_Cursor_Rainbow/workflows/ci/badge.svg"/>
+    <img alt="GitHub Action Build" src="https://github.com/ful1e5/Bibata_Cursor_Rainbow/actions/workflows/ci.yml/badge.svg"/>
   </a>
 
   <!-- Second Row -->
