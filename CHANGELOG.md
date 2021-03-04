@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [unreleased]
 
+### Added
+
+- pling product page docs
+
 ## [Bibata Rainbow v1.1.0] - 04 Mar 2021
 
 ### Added

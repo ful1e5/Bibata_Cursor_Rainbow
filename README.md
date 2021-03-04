@@ -15,7 +15,7 @@
   <!-- First Row -->
 
   <a href="https://github.com/ful1e5/Bibata_Cursor_Rainbow/actions">
-    <img alt="GitHub Action Build" src="https://github.com/ful1e5/Bibata_Cursor_Rainbow/actions/workflows/ci.yml/badge.svg"/>
+    <img alt="GitHub Action Build" src="https://github.com/ful1e5/Bibata_Cursor_Rainbow/workflows/ci/badge.svg"/>
   </a>
 
   <!-- Second Row -->
