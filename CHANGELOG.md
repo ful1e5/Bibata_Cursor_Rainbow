@@ -7,9 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [unreleased]
 
+## [Bibata Rainbow v1.1.1] - 30 Mar 2021
+
 ### Added
 
 - pling product page docs
+- **2 space** format in `bitmapper`
+- `brbpkg` installed as user in **make** command
+- Supports clickgen v1.1.9
+- `PNGProvider` imported from `clickgen.util`
+- `builder/brbpkg` docstring in _reST_ with sphinx supports
+
+### Changed
+
+- python3 `virtualenv` commands removed from `builder/Makefile`
+- Removed `builder/brbpkg/extra.py` module (all funtions _imported_ from `clickgen`)
+- clean builder cache on every **make** commands
 
 ## [Bibata Rainbow v1.1.0] - 04 Mar 2021
 
@@ -42,6 +55,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Bibata Rainbow v1.0.0] - 17 Nov 2020
 
+> First version of **Bibata_Cursor_Rainbow** is published on **Bibata_Cursor** repo
+
 ### Added
 
 - **Bibata Rainbow** (semi-animated) cursors. **#55**
@@ -57,6 +72,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Bibata** workflow file names changed to `bibata-ci.yml` & `bibata-pr.yml`
 - Optimize **BitmapsGenerator** browser.
 
-[unreleased]: https://github.com/ful1e5/Bibata_Cursor_Rainbow/compare/v1.1.0...main
-[bibata rainbow v1.1.0]: https://github.com/ful1e5/Bibata_Cursor_Rainbow/compare/v1.1.0...main
+[unreleased]: https://github.com/ful1e5/Bibata_Cursor_Rainbow/compare/v1.1.1...main
+[bibata rainbow v1.1.1]: https://github.com/ful1e5/Bibata_Cursor_Rainbow/compare/v1.1.1...v1.1.0
+[bibata rainbow v1.1.0]: https://github.com/ful1e5/Bibata_Cursor_Rainbow/tree/v1.1.0
 [bibata rainbow v1.0.0]: https://github.com/ful1e5/Bibata_Cursor/compare/v1.0.3...v1.0.0.br
