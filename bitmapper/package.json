@@ -10,5 +10,7 @@
     "render:bibata-rainbow-modern": "yarn workspace bibata-rainbow-modern render",
     "render:bibata-rainbow-original": "yarn workspace bibata-rainbow-original render"
   },
-  "workspaces": ["packages/*"]
+  "workspaces": [
+    "packages/*"
+  ]
 }
