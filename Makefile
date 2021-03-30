@@ -1,10 +1,10 @@
 all: clean render build
 
 unix: clean render bitmaps
-	@cd builder && make setup build_unix
+	@cd builder && make setup build_unix clean
 
 windows: clean render bitmaps
-	@cd builder && make setup build_windows
+	@cd builder && make setup build_windows clean
 
 .PHONY: all
 
@@ -32,21 +32,21 @@ render_modern: bitmapper svg
 #
 
 build: bitmaps
-	@cd builder && make setup build
+	@cd builder && make setup build clean
 
 build_unix: bitmaps
 	@rm -rf themes
-	@cd builder && make setup build_unix
+	@cd builder && make setup build_unix clean
 
 build_windows: bitmaps
 	@rm -rf themes
-	@cd builder && make setup build_windows
+	@cd builder && make setup build_windows clean
 
 build_modern: bitmaps
-	@cd builder && make setup build_modern
+	@cd builder && make setup build_modern clean
 
 build_original: bitmaps
-	@cd builder && make setup build_original
+	@cd builder && make setup build_original clean
 
 #
 # Installation
