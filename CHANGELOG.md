@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - pling product page docs
+- **2 space** format in `bitmapper`
 
 ## [Bibata Rainbow v1.1.0] - 04 Mar 2021
 
