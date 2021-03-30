@@ -11,6 +11,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - pling product page docs
 - **2 space** format in `bitmapper`
+- `brbpkg` installed as user in **make** command
+- Supports clickgen v1.1.9
+- `PNGProvider` imported from `clickgen.util`
+- `builder/brbpkg` docstring in _reST_ with sphinx supports
+
+### Changed
+
+- python3 `virtualenv` commands removed from `builder/Makefile`
+- Removed `builder/brbpkg/extra.py` module (all funtions _imported_ from `clickgen`)
+- clean builder cache on every **make** commands
 
 ## [Bibata Rainbow v1.1.0] - 04 Mar 2021
 
