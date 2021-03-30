@@ -5,7 +5,7 @@ from setuptools import setup
 
 setup(
     name="brbpkg",
-    version="1.1.0",
+    version="1.1.1",
     description="Generate 'Bibata-Rainbow' cursor theme from PNGs file",
     url="https://github.com/ful1e5/Bibata_Cursor_Rainbow",
     packages=["brbpkg"],
