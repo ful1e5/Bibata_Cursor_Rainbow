@@ -1,12 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from typing import Any, Dict, Tuple, TypeVar
-
-from brbpkg.extra import PNGProvider
+from pathlib import Path
+from typing import Any, Dict, Tuple, TypeVar, Union
 
 from brbpkg.constants import WIN_CURSORS_CFG, WIN_DELAY, X_CURSORS_CFG, X_DELAY
-
+from clickgen.util import PNGProvider
 
 X = TypeVar("X")
 
@@ -15,24 +14,20 @@ def to_tuple(x: X) -> Tuple[X, X]:
     return (x, x)
 
 
-def get_config(bitmaps_dir, **kwargs) -> Dict[str, Any]:
+def get_config(bitmaps_dir: Union[str, Path], **kwargs) -> Dict[str, Any]:
     """Return configuration of `Bibata Rainbow` pointers.
 
-    ```
-    Args:
+    :param bitmaps_dir: Path to .png file's directory.
+    :type bitmaps_dir: Union[str, Path]
 
-    :bitmaps_dir: (str | Path) Path to .png file's directory.
+    :param x_sizes: List of pixel-sizes for xcursors.
+    :type x_sizes: List[int]
 
+    :param win_canvas_size: Windows cursor's canvas pixel-size.
+    :type win_canvas_size: int
 
-    Keywords Args:
-
-    :x_sizes: (List[int]) List of pixel-sizes for xcursors.
-
-    :win_canvas_size: (int) Windows cursor's canvas pixel-size.
-
-    :win_size: (int) Pixel-size for Windows cursor.
-
-    ```
+    :param win_size: Pixel-size for Windows cursor.
+    :type win_size: int
 
     Example:
 
