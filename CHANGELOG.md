@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [unreleased]
 
+### Added
+
+- Support button inside PLING.bbcode product page
+
 ## [Bibata Rainbow v1.1.1] - 30 Mar 2021
 
 ### Added
