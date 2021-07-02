@@ -72,3 +72,22 @@ uninstall:
 	@fi
 
 reinstall: uninstall install
+
+# generates binaries
+BIN_DIR = ../bin
+prepare: bitmaps themes
+	# Bitmaps
+	@rm -rf bin && mkdir bin
+	@cd bitmaps && zip -r $(BIN_DIR)/bitmaps.zip * && cd ..
+	@cd themes
+	#
+	# Bibata-Modern
+	#
+	@tar -czvf $(BIN_DIR)/Bibata-Rainbow-Modern.tar.gz Bibata-Rainbow-Modern
+	@zip -r $(BIN_DIR)/Bibata-Rainbow-Modern-Windows.zip Bibata-Rainbow-Modern-Windows
+	#
+	# Bibata-Original
+	#
+	@tar -czvf $(BIN_DIR)/Bibata-Rainbow-Original.tar.gz Bibata-Rainbow-Original
+	@zip -r $(BIN_DIR)/Bibata-Rainbow-Original-Windows.zip Bibata-Rainbow-Original-Windows
+	@cd ..
