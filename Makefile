@@ -32,21 +32,21 @@ render_modern: bitmapper svg
 #
 
 build: bitmaps
-	@cd builder && make setup build clean
+	@cd builder && make setup build
 
 build_unix: bitmaps
 	@rm -rf themes
-	@cd builder && make setup build_unix clean
+	@cd builder && make setup build_unix
 
 build_windows: bitmaps
 	@rm -rf themes
-	@cd builder && make setup build_windows clean
+	@cd builder && make setup build_windows
 
 build_modern: bitmaps
-	@cd builder && make setup build_modern clean
+	@cd builder && make setup build_modern
 
 build_original: bitmaps
-	@cd builder && make setup build_original clean
+	@cd builder && make setup build_original
 
 #
 # Installation
