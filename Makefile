@@ -1,57 +1,46 @@
 all: clean render build
 
-unix: clean render bitmaps
-	@cd builder && make setup build_unix clean
-
-windows: clean render bitmaps
-	@cd builder && make setup build_windows clean
-
 .PHONY: all
 
+# Default
 clean:
 	@rm -rf bitmaps themes
-	
-modern: clean render_modern build_modern
-original:clean render_original build_original
-
-#
-# Render Bibata Bitmaps
-#
 
 render: bitmapper svg
 	@cd bitmapper && make install render_modern render_original
 
-render_original: bitmapper svg
-	@cd bitmapper && make install render_original
+build: bitmaps
+	@cd builder && make setup build
+
+
+# Specific platform build
+unix: clean render bitmaps
+	@cd builder && make setup build_unix
+
+windows: clean render bitmaps
+	@cd builder && make setup build_windows
+
+# Bibata Modern
+modern: clean render_modern build_modern
 
 render_modern: bitmapper svg
 	@cd bitmapper && make install render_modern
 
-#
-# Build Bibata Unix & Windows cursors
-#
-
-build: bitmaps
-	@cd builder && make setup build
-
-build_unix: bitmaps
-	@rm -rf themes
-	@cd builder && make setup build_unix
-
-build_windows: bitmaps
-	@rm -rf themes
-	@cd builder && make setup build_windows
-
 build_modern: bitmaps
 	@cd builder && make setup build_modern
+
+
+# Bibata Original
+original:clean render_original build_original
+
+render_original: bitmapper svg
+	@cd bitmapper && make install render_original
 
 build_original: bitmaps
 	@cd builder && make setup build_original
 
-#
-# Installation
-#
 
+# Installation
 .ONESHELL:
 SHELL:=/bin/bash
 
