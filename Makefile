@@ -1,57 +1,46 @@
 all: clean render build
 
-unix: clean render bitmaps
-	@cd builder && make setup build_unix clean
-
-windows: clean render bitmaps
-	@cd builder && make setup build_windows clean
-
 .PHONY: all
 
+# Default
 clean:
 	@rm -rf bitmaps themes
-	
-modern: clean render_modern build_modern
-original:clean render_original build_original
-
-#
-# Render Bibata Bitmaps
-#
 
 render: bitmapper svg
 	@cd bitmapper && make install render_modern render_original
 
-render_original: bitmapper svg
-	@cd bitmapper && make install render_original
+build: bitmaps
+	@cd builder && make setup build
+
+
+# Specific platform build
+unix: clean render bitmaps
+	@cd builder && make setup build_unix
+
+windows: clean render bitmaps
+	@cd builder && make setup build_windows
+
+# Bibata Modern
+modern: clean render_modern build_modern
 
 render_modern: bitmapper svg
 	@cd bitmapper && make install render_modern
 
-#
-# Build Bibata Unix & Windows cursors
-#
-
-build: bitmaps
-	@cd builder && make setup build clean
-
-build_unix: bitmaps
-	@rm -rf themes
-	@cd builder && make setup build_unix clean
-
-build_windows: bitmaps
-	@rm -rf themes
-	@cd builder && make setup build_windows clean
-
 build_modern: bitmaps
-	@cd builder && make setup build_modern clean
+	@cd builder && make setup build_modern
+
+
+# Bibata Original
+original:clean render_original build_original
+
+render_original: bitmapper svg
+	@cd bitmapper && make install render_original
 
 build_original: bitmaps
-	@cd builder && make setup build_original clean
+	@cd builder && make setup build_original
 
-#
+
 # Installation
-#
-
 .ONESHELL:
 SHELL:=/bin/bash
 
@@ -83,3 +72,22 @@ uninstall:
 	@fi
 
 reinstall: uninstall install
+
+# generates binaries
+BIN_DIR = ../bin
+prepare: bitmaps themes
+	# Bitmaps
+	@rm -rf bin && mkdir bin
+	@cd bitmaps && zip -r $(BIN_DIR)/bitmaps.zip * && cd ..
+	@cd themes
+	#
+	# Bibata-Modern
+	#
+	@tar -czvf $(BIN_DIR)/Bibata-Rainbow-Modern.tar.gz Bibata-Rainbow-Modern
+	@zip -r $(BIN_DIR)/Bibata-Rainbow-Modern-Windows.zip Bibata-Rainbow-Modern-Windows
+	#
+	# Bibata-Original
+	#
+	@tar -czvf $(BIN_DIR)/Bibata-Rainbow-Original.tar.gz Bibata-Rainbow-Original
+	@zip -r $(BIN_DIR)/Bibata-Rainbow-Original-Windows.zip Bibata-Rainbow-Original-Windows
+	@cd ..

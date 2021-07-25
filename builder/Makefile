@@ -1,4 +1,4 @@
-all: clean setup build
+all: setup build
 
 bitmaps_dir = "../bitmaps"
 
@@ -11,18 +11,8 @@ X_SIZES ?=22 24 28 32 40 48 56 64 72 80 88 96
 WIN_CANVAS_SIZE ?= 32
 WIN_SIZE ?= 24
 
-clean:
-	@rm -rf brbpkg.egg-info build dist
-	@find -iname "*.pyc" -delete
-
-	# Removing setup.py package files if installed
-	@if [ -f "files.txt" ]; then
-		@xargs rm -rf < files.txt
-		@rm -rf files.txt
-	@fi
-
-setup: setup.py
-	@python3 setup.py install --user --record files.txt
+setup:
+	@python3 -m pip install clickgen --user
 
 build: build_modern build_original
 
@@ -32,6 +22,7 @@ build_modern: build.py
 build_original: build.py
 	@python3 build.py -p "$(bitmaps_dir)/Bibata-Rainbow-Original" --xsizes $(X_SIZES) --win-size $(WIN_SIZE) --win-canvas-size $(WIN_CANVAS_SIZE)
 
+
 build_unix: build_modern_unix build_original_unix
 
 build_modern_unix: build.py
@@ -39,6 +30,7 @@ build_modern_unix: build.py
 
 build_original_unix: build.py
 	@python3 build.py unix -p "$(bitmaps_dir)/Bibata-Rainbow-Original" --xsizes $(X_SIZES)
+
 
 build_windows: build_modern_windows build_original_windows
 

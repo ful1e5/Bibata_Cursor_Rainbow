@@ -4,9 +4,8 @@
 import argparse
 from pathlib import Path
 
-from brbpkg.configure import get_config
-from brbpkg.generator import Info, xbuild, wbuild, build
-
+from src.configure import get_config
+from src.generator import Info, build, wbuild, xbuild
 
 parser = argparse.ArgumentParser(
     prog="bibata_rainbow_builder",

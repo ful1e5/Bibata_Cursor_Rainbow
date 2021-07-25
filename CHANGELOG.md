@@ -7,7 +7,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [unreleased]
 
-## [Bibata Rainbow v1.1.1] - 30 Mar 2021
+## [v1.1.2] - 25 Jul 2021
+
+### Added
+
+- Support button inside `PLING.bbcode` product page
+- `make prepare` command for preparing bibata binaries
+- `pyrightconfig.json` init
+
+### Changed
+
+- Removed **clean** target from `builder/Makefile`
+- Compact code inside `builder/*`
+- Remove `setup.py`
+- Builder code moved to `src`
+- Import `src` module directly inside `build.py`
+- `Makefile` build commands re-arrange with groups
+- Dynamic determine **Windows canvas size** on **Windows cursor size** inside `build.py`
+
+## [v1.1.1] - 30 Mar 2021
 
 ### Added
 
@@ -24,7 +42,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed `builder/brbpkg/extra.py` module (all funtions _imported_ from `clickgen`)
 - clean builder cache on every **make** commands
 
-## [Bibata Rainbow v1.1.0] - 04 Mar 2021
+## [v1.1.0] - 04 Mar 2021
 
 ### Added
 
@@ -53,7 +71,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix Cursors not available for Login Window in Linux Mint 20 #88
 - Dirty pixel in `move` cursor fixed #94
 
-## [Bibata Rainbow v1.0.0] - 17 Nov 2020
+## [v1.0.0] - 17 Nov 2020
 
 > First version of **Bibata_Cursor_Rainbow** is published on **Bibata_Cursor** repo
 
@@ -72,7 +90,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Bibata** workflow file names changed to `bibata-ci.yml` & `bibata-pr.yml`
 - Optimize **BitmapsGenerator** browser.
 
-[unreleased]: https://github.com/ful1e5/Bibata_Cursor_Rainbow/compare/v1.1.1...main
-[bibata rainbow v1.1.1]: https://github.com/ful1e5/Bibata_Cursor_Rainbow/compare/v1.1.1...v1.1.0
-[bibata rainbow v1.1.0]: https://github.com/ful1e5/Bibata_Cursor_Rainbow/tree/v1.1.0
-[bibata rainbow v1.0.0]: https://github.com/ful1e5/Bibata_Cursor/compare/v1.0.3...v1.0.0.br
+[unreleased]: https://github.com/ful1e5/Bibata_Cursor_Rainbow/compare/v1.1.2...main
+[v1.1.2]: https://github.com/ful1e5/Bibata_Cursor_Rainbow/compare/v1.1.2...v1.1.1
+[v1.1.1]: https://github.com/ful1e5/Bibata_Cursor_Rainbow/compare/v1.1.1...v1.1.0
+[v1.1.0]: https://github.com/ful1e5/Bibata_Cursor_Rainbow/tree/v1.1.0
+[v1.0.0]: https://github.com/ful1e5/Bibata_Cursor/compare/v1.0.3...v1.0.0.br
