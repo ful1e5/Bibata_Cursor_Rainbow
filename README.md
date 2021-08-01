@@ -13,13 +13,11 @@
 <p align="center">
 
   <!-- First Row -->
-
   <a href="https://github.com/ful1e5/Bibata_Cursor_Rainbow/actions">
     <img alt="GitHub Action Build" src="https://github.com/ful1e5/Bibata_Cursor_Rainbow/workflows/ci/badge.svg"/>
   </a>
 
   <!-- Second Row -->
-
   </br >
   <a href="https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html">
     <img alt="npm type definitions" src="https://img.shields.io/npm/types/typescript">
@@ -28,10 +26,8 @@
   <a href="https://github.com/ful1e5/clickgen">
     <img alt="Clickgen" src="https://img.shields.io/badge/theme%20builder-clickgen-FD0542" />
   </a>
-  
-  
-  <!-- Third Row -->
 
+  <!-- Third Row -->
   </br >
   <a href="https://github.com/ful1e5/Bibata_Cursor_Rainbow/blob/main/LICENSE" >
     <img alt="License" src="https://img.shields.io/github/license/ful1e5/Bibata_Cursor_Rainbow?color=0081FB" />
@@ -40,10 +36,8 @@
   <a href="https://github.com/ful1e5/Bibata_Cursor_Rainbow/releases" >
     <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/ful1e5/Bibata_Cursor_Rainbow">
   </a>
-  
-  
-  <!-- Fourth Row -->
 
+  <!-- Fourth Row -->
   <br />
   <a href="https://www.pling.com/p/1445634/#files-panel">
     <img alt="License" src="https://img.shields.io/badge/-Linux-grey?logo=linux" />
@@ -54,7 +48,6 @@
   </a>
 
   <!-- Fifth Row -->
-
   <br />
   <a href="https://github.com/ful1e5">
     <img alt="Made By Kaiz"  src="https://kaiz.vercel.app/api/badge" width="133" />
@@ -113,10 +106,10 @@ Latest `Stable` & `Development` releases can be downloaded from [Here](https://g
 tar -xvf Bibata-Rainbow.tar.gz
 
 # For local users
-mv Bibata_Rainbow-* ~/.icons/
+mv Bibata-Rainbow-* ~/.icons/
 
 # For all users
-sudo mv Bibata_Rainbow-* /usr/share/icons/
+sudo mv Bibata-Rainbow-* /usr/share/icons/
 ```
 
 #### Windows
