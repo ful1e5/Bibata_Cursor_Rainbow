@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - sponsorships updated
+- minimal docs inside `README.md`
 
 ## [v1.1.2] - 25 Jul 2021
 
