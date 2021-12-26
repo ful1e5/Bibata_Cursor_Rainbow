@@ -6,12 +6,12 @@
 
 'Semi-Animated' Bibata cursors with rainbow colors
 
-# Bibata Styles
+### Bibata Styles
 
 - **Bibata Original :** Sharp edge Bibata Cursors
 - **Bibata Modern :** Round edge Bibata Cursors
 
-# Cursor Sizes
+### Cursor Sizes
 
 <kbd>22</kbd>
 <kbd>24</kbd>
@@ -26,15 +26,7 @@
 <kbd>88</kbd>
 <kbd>96</kbd>
 
-## Preview
-
-<p align="center">
-  <img title="Bibata Rainbow" width="90%" src="./svg/branding/preview.svg">
-  </br>
-  <sub>Bibata Rainbow</sub>
-</p>
-
-## Quick install
+### Quick install
 
 <p align="center">
   <a href="https://www.pling.com/p/1445634/#files-panel" >
@@ -42,7 +34,15 @@
   </a>
 </p>
 
-## Manual Install
+### Preview
+
+<p align="center">
+  <img title="Bibata Rainbow" width="90%" src="./svg/branding/preview.svg">
+  </br>
+  <sub>Bibata Rainbow</sub>
+</p>
+
+### Manual Install
 
 Latest `Stable` & `Development` releases can be downloaded from [Here](https://github.com/ful1e5/Bibata_Cursor_Rainbow/releases)
 
