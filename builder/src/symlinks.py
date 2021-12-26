@@ -92,7 +92,14 @@ def add_missing_xcursor(directory: Union[str, Path]) -> None:
                 "pointing_hand",
             ],
         },
-        {"src": "left_ptr", "links": ["arrow", "default"]},
+        {
+            "src": "left_ptr",
+            "links": [
+                "arrow",
+                "default",
+                "top_left_arrow",
+            ],
+        },
         {
             "src": "left_ptr_watch",
             "links": [
@@ -178,6 +185,6 @@ def add_missing_xcursor(directory: Union[str, Path]) -> None:
     with chdir(directory):
         for item in symlinks:
             src = item["src"]
-            for link in item.get("links"):
+            for link in item["links"]:
                 print(f"Creating symlink {src} -> {link}")
                 os.symlink(src, link)
