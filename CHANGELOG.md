@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Bibata-Zebra link added
 - pling link updated inside PLING.bbcode
 
+### Changed
+
+- sponsorships updated
+
 ## [v1.1.2] - 25 Jul 2021
 
 ### Added
