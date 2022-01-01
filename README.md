@@ -1,10 +1,10 @@
 # Bibata Cursor Rainbow
 
-[![ci](https://github.com/ful1e5/Bibata_Cursor_Rainbow/actions/workflows/ci.yml/badge.svg)](https://github.com/ful1e5/Bibata_Cursor_Rainbow/actions/workflows/ci.yml)
+'Semi-Animated' Bibata cursors with rainbow colors.
+
+[![build](https://github.com/ful1e5/Bibata_Cursor_Rainbow/actions/workflows/build.yml/badge.svg)](https://github.com/ful1e5/Bibata_Cursor_Rainbow/actions/workflows/build.yml)
 [![CodeFactor](https://www.codefactor.io/repository/github/ful1e5/bibata_cursor_rainbow/badge)](https://www.codefactor.io/repository/github/ful1e5/bibata_cursor_rainbow)
 [![Twitter](https://img.shields.io/badge/twitter-ful1e5-blue)](https://twitter.com/ful1e5)
-
-'Semi-Animated' Bibata cursors with rainbow colors
 
 ### Bibata Styles
 
@@ -125,7 +125,7 @@ sudo dnf install libX11-devel libXcursor-devel libpng-devel
 
 ### Auto Build (using GitHub Actions)
 
-GitHub Actions is automatically runs on every `push`(on **main** & **dev** branch) and `pull request`(on **main** branch), You found theme resources in `artifact` section of **ci**. GitHub **Actions** available inside [.github/workflows](https://github.com/ful1e5/Bibata_Cursor_Rainbow)/tree/main/.github/workflows) directory.
+GitHub Actions is automatically runs on every `push`(on **main** & **dev** branch) and `pull request`(on **main** branch), You found theme resources in `artifact` section of **ci**. GitHub **Actions** available inside [.github/workflows](https://github.com/ful1e5/Bibata_Cursor_Rainbow/tree/main/.github/workflows) directory.
 
 ### Manual Build
 
