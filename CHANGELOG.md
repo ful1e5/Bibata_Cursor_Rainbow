@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Bibata-Zebra link added
 - pling link updated inside PLING.bbcode
 - Add symlink for `top_left_arrow` cursor ful1e5/BreezeX_Cursor#10 ful1e5/BreezeX_Cursor#11
+- Uninstall docs ful1e5/apple_cursor#79 ful1e5/apple_cursor#80
 
 ### Changed
 
